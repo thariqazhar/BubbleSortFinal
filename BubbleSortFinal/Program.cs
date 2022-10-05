@@ -16,7 +16,7 @@ namespace Bubble_Sort
             //menerima angka untuk menentukan banyaknya data yang disimpan pada array
             while (true)
             {
-                Console.WriteLine("Masukkan banyaknya elemen pada Array: ");
+                Console.Write("Masukkan banyaknya elemen pada Array: ");
                 string s = Console.ReadLine();
                 n = Int32.Parse(s);
                 if (n <= 20)
@@ -72,6 +72,23 @@ namespace Bubble_Sort
             }
         }
 
+        static void Main(string[] args)
+        {
+            //creating the object of the BubbleSort class
+            Program myList = new Program();
 
+            //pemanggilan fungsi untuk menerima elemen array
+            myList.read();
+
+            //pemanggilan fungsi untuk mengurutkan array
+            myList.BubbleSortArray();
+
+            //pemanggilan fungsi untuk menampilkan array yang tersusun
+            myList.display();
+
+            //exit
+            Console.WriteLine("\n\nTekan tombol apa saja untuk keluar.");
+            Console.Read();
+        }
     }
 }
